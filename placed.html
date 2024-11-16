@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" sizes="20x20">
+</head>
+<body>
+    <section id="header" class="nav-header">
+        <a href="#"><img src="./img/logo.png" alt="shopping" class="logo"></a>
+      
+        
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping fa-beat"></i></a></li>
+                <li><a href="index.html"><i class="fa-regular fa-user" style="color: #0e042a;"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a id="cart" href="cart.html"><i class="fa-solid fa-bag-shopping fa-beat"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="placed">
+        <audio autoplay >
+            <source src="./img/placeorder/confirn.mp3">
+        </audio>
+        <img src="./img/placeorder/placed.png" alt="">
+    </section>
+
+    <script>
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
+
+        if (bar) {
+            bar.addEventListener('click', () => {
+                nav.classList.add('active');
+                document.getElementById('cart').style.display = 'none';
+            })
+
+        }
+
+        if (close) {
+            close.addEventListener('click', () => {
+                nav.classList.remove('active');
+                document.getElementById('cart').style.display = 'flex';
+
+            })
+
+        }
+    </script>
+</body>
+</html>
