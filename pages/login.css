@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for login form */
+#login {
+    background-color: #fff;
+    padding: 40px 20px;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title styling */
+.login_title-center {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form elements */
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.login_content {
+    width: 100%;
+}
+
+.login_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.normal {
+    width:10%;
+    margin-left:80%;
+    padding: 12px;
+    background-color:#088178;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.normal:hover {
+    background-color:#07645e;
+}
+
+/* Forgot password link */
+#login a {
+    display: block;
+    margin-top:70px;
+    color: #088178;
+    margin-right:60%;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#login a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #login {
+        padding: 20px;
+        max-width:650px;
+    }
+    
+    .login_title-center {
+        font-size: 1.2rem;
+    }
+
+    .login_input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button.normal {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login_title-center {
+        font-size: 1rem;
+    }
+
+    button.normal {
+        padding: 8px;
+        font-size: 0.8rem;
+        width: 150px;
+
+    }
+}
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Website Registration</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./signup.css"">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png" sizes="20x20">
+</head>
+<body>
+
+    <div id="registration">
+        <h2>Join Our Fashion Community Today</h2>
+
+        <!-- Registration form -->
+        <form action="../php/uploads/signup.php" method="POST" enctype="multipart/form-data" class="registration_form">
+            
+            <!-- Personal Information -->
+            <div class="form_group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form_group">
+                <label for="gender">Gender:</label>
+                <div class="gender_options">
+                        <input type="radio" name="gender" value="male" required> Male
+                        <input type="radio" name="gender" value="female" required> Female                   
+                        <input type="radio" name="gender" value="other" required> Other
+                </div>
+            </div>
+            
+
+            <div class="form_group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form_group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            </div>
+
+            <!-- Account Information -->
+            <div class="form_group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+            </div>
+
+            <div class="form_group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="form_group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+            </div>
+
+            <!-- Document Upload -->
+            <div class="form_group">
+                <label for="document">Upload Document (PDF, JPG, PNG)</label>
+                <input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form_group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="register_btn" onclick="window.localStorage.href='./index.html'">Register</button>
+
+            <!-- <section id="pegination">
+                <a href="../index.html" style="text-decoration: none; margin-left: 20px;">Sign Up</a>
+            </section> -->
+        </form>
+    </div>
+    <!-- <a href="forget_password.php">forget_password</a> -->
+</body>
+</html>
